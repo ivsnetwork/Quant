@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanuman Group - Quant Dashboard</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light pt-5 mt-4"> 
+
+  <!-- Floating Wrapper for Navbar -->
+  <div class="fixed-top pt-3 px-3 px-md-5 z-3 d-print-none">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white px-4 py-2 shadow rounded-5 border">
+      <div class="container-fluid">
+        
+        <!-- Brand / Logo -->
+        <a class="navbar-brand fw-bold fs-4 text-dark ms-2 d-flex align-items-center gap-2" href="#">
+          <img src="https://github.com/ivsnetwork/ivsnetwork.github.io/blob/main/Total.png?raw=true" alt="Hanuman Group Logo" width="36" height="36" class="rounded-circle object-fit-cover">
+          Hanuman Group
+        </a>
+        
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#hanumannavbar" aria-controls="hanumannavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="hanumannavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 mt-3 mt-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-dark" aria-current="page" href="https://ivsnetwork.github.io/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-secondary" href="https://academyflex.com/wp-content/uploads/2024/03/a-practical-guide-to-quantitative-finance-interviews.pdf">Greem Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-secondary" href="https://kite.zerodha.com/">Zerodha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-secondary" href="https://nasscom.in/">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navigation Bar End -->
+
+  <div class="container mt-5 pt-4 mb-5">
+    
+    <!-- TradingView Section -->
+    <div class="d-flex justify-content-between align-items-end mb-3 d-print-none">
+      <div>
+        <h2 class="fw-bold mb-1">Live Chart</h2>
+        <p class="text-secondary mb-0">Advanced interactive market data.</p>
+      </div>
+      <div class="d-none d-sm-block">
+        <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 fw-medium">&#x25cf; Market Open</span>
+      </div>
+    </div>
+
+    <!-- TradingView Iframe Card -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5 bg-white d-print-none">
+      <div class="ratio ratio-21x9 min-vh-50">
+        <iframe 
+          src="https://s.tradingview.com/widgetembed/?symbol=BSE%3ASENSEX&interval=D&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&theme=light&style=1&timezone=Asia%2FKolkata" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Market Watchlist Table Section -->
+    <div class="d-flex justify-content-between align-items-end mb-3">
+      <div>
+        <h3 class="fw-bold mb-1">Indian Indices Watchlist</h3>
+      </div>
+    </div>
+
+    <!-- Indices Table -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5 page-break-inside-avoid">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless align-middle mb-0 w-100">
+          <thead class="table-light border-bottom">
+            <tr>
+              <th class="text-secondary fw-semibold py-3 ps-4">Index</th>
+              <th class="text-secondary fw-semibold py-3 text-end">Value</th>
+              <th class="text-secondary fw-semibold py-3 text-end">Day Change</th>
+              <th class="text-secondary fw-semibold py-3 pe-4 text-end">Volume / Turnover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="bg-primary bg-opacity-10 text-primary border border-primary-subtle rounded d-flex justify-content-center align-items-center fw-bold" style="width: 45px; height: 45px;">
+                    BSN
+                  </div>
+                  <div>
+                    <span class="d-block fw-bold text-dark">S&P BSE SENSEX</span>
+                    <span class="text-secondary small">Broad Market</span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-3 text-end fw-medium font-monospace fs-5">73,900.01</td>
+              <td class="py-3 text-end fw-semibold text-danger font-monospace">&#9660; -0.11%</td>
+              <td class="py-3 pe-4 text-end text-secondary font-monospace">₹ 4,120 Cr</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="bg-success bg-opacity-10 text-success border border-success-subtle rounded d-flex justify-content-center align-items-center fw-bold" style="width: 45px; height: 45px;">
+                    BNK
+                  </div>
+                  <div>
+                    <span class="d-block fw-bold text-dark">S&P BSE BANKEX</span>
+                    <span class="text-secondary small">Financials</span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-3 text-end fw-medium font-monospace fs-5">62,142.72</td>
+              <td class="py-3 text-end fw-semibold text-success font-monospace">&#9650; +0.13%</td>
+              <td class="py-3 pe-4 text-end text-secondary font-monospace">₹ 2,850 Cr</td>
+            </tr>
+            <tr>
+              <td class="py-3 ps-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="bg-warning bg-opacity-10 text-warning-emphasis border border-warning-subtle rounded d-flex justify-content-center align-items-center fw-bold" style="width: 45px; height: 45px;">
+                    AUT
+                  </div>
+                  <div>
+                    <span class="d-block fw-bold text-dark">S&P BSE AUTO</span>
+                    <span class="text-secondary small">Automobiles</span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-3 text-end fw-medium font-monospace fs-5">56,794.02</td>
+              <td class="py-3 text-end fw-semibold text-danger font-monospace">&#9660; -0.10%</td>
+              <td class="py-3 pe-4 text-end text-secondary font-monospace">₹ 1,140 Cr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Quantitative Library Table -->
+    <div class="d-flex justify-content-between align-items-end mb-3 mt-5">
+      <div>
+        <h3 class="fw-bold mb-1">Quantitative Library & Curriculum</h3>
+        <p class="text-secondary mb-0">Core literature, mathematics, and algorithms for quant development.</p>
+      </div>
+    </div>
+
+    <!-- Library Table Card Wrapper -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5 page-break-inside-avoid">
+      <div class="table-responsive" style="max-height: 800px; overflow-y: auto;">
+        <table class="table table-hover table-borderless align-middle mb-0 w-100">
+          
+          <thead class="table-light border-bottom sticky-top z-2">
+            <tr>
+              <th class="text-secondary fw-semibold py-3 ps-4">Topic / Domain</th>
+              <th class="text-secondary fw-semibold py-3">Book Title</th>
+              <th class="text-secondary fw-semibold py-3">Author(s)</th>
+              <th class="text-secondary fw-semibold py-3 pe-4 text-end">Action</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            
+            <!-- FINANCE DOMAIN -->
+            <tr class="border-bottom"><td colspan="4" class="bg-light py-2 ps-4 fw-bold text-secondary small text-uppercase tracking-wide">Core Finance & Trading</td></tr>
+            
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Introductory Finance</span></td>
+              <td class="py-3 fw-bold text-dark">Options, Futures, and Other Derivatives</td>
+              <td class="py-3 text-secondary">John Hull</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Introductory Finance</span></td>
+              <td class="py-3 fw-bold text-dark">Paul Wilmott Introduces Quantitative Finance</td>
+              <td class="py-3 text-secondary">Paul Wilmott</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Quant Trading</span></td>
+              <td class="py-3 fw-bold text-dark">Advances in Financial Machine Learning</td>
+              <td class="py-3 text-secondary">Marcos López de Prado</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Quant Trading</span></td>
+              <td class="py-3 fw-bold text-dark">Inside the Black Box</td>
+              <td class="py-3 text-secondary">Rishi Narang</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Quant Trading</span></td>
+              <td class="py-3 fw-bold text-dark">Active Portfolio Management</td>
+              <td class="py-3 text-secondary">Grinold & Kahn</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Interest Rates</span></td>
+              <td class="py-3 fw-bold text-dark">Pricing and Trading Interest Rate Derivatives</td>
+              <td class="py-3 text-secondary">J. H. M. Darbyshire</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Rates / Inflation</span></td>
+              <td class="py-3 fw-bold text-dark">Interest Rate Models: Theory and Practice</td>
+              <td class="py-3 text-secondary">Brigo & Mercurio</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">FX</span></td>
+              <td class="py-3 fw-bold text-dark">FX Options and Smile Risk</td>
+              <td class="py-3 text-secondary">Antonio Castagna</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">FX</span></td>
+              <td class="py-3 fw-bold text-dark">FX Options and Structured Products</td>
+              <td class="py-3 text-secondary">Uwe Wystup</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Equities / Volatility</span></td>
+              <td class="py-3 fw-bold text-dark">Option Volatility and Pricing</td>
+              <td class="py-3 text-secondary">Sheldon Natenberg</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Equities / Volatility</span></td>
+              <td class="py-3 fw-bold text-dark">Stochastic Volatility Modelling</td>
+              <td class="py-3 text-secondary">Lorenzo Bergomi</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Credit</span></td>
+              <td class="py-3 fw-bold text-dark">Credit Risk: Modeling, Valuation and Hedging</td>
+              <td class="py-3 text-secondary">Bielecki & Rutkowski</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Credit</span></td>
+              <td class="py-3 fw-bold text-dark">Modelling Single-name and Multi-name Credit Derivatives</td>
+              <td class="py-3 text-secondary">Dominic O'Kane</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Commodities</span></td>
+              <td class="py-3 fw-bold text-dark">Commodities and Commodity Derivatives</td>
+              <td class="py-3 text-secondary">Helyette Geman</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Commodities</span></td>
+              <td class="py-3 fw-bold text-dark">Commodity Option Pricing for Practitioners</td>
+              <td class="py-3 text-secondary">Espen Gaarder Haug Clark</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Fixed Income</span></td>
+              <td class="py-3 fw-bold text-dark">Bond Markets, Analysis, and Strategies</td>
+              <td class="py-3 text-secondary">Frank Fabozzi</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Fixed Income</span></td>
+              <td class="py-3 fw-bold text-dark">The Handbook of Fixed Income Securities</td>
+              <td class="py-3 text-secondary">Frank Fabozzi</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Structured Finance</span></td>
+              <td class="py-3 fw-bold text-dark">Mortgage-Backed Securities</td>
+              <td class="py-3 text-secondary">Frank Fabozzi</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Structured Finance</span></td>
+              <td class="py-3 fw-bold text-dark">Mortgage Valuation Models</td>
+              <td class="py-3 text-secondary">Davidson & Lewis</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">XVA</span></td>
+              <td class="py-3 fw-bold text-dark">The xVA Challenge</td>
+              <td class="py-3 text-secondary">Jon Gregory</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">XVA</span></td>
+              <td class="py-3 fw-bold text-dark">Modern Derivatives Pricing and Credit Exposure Analysis</td>
+              <td class="py-3 text-secondary">Lichters et al.</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+
+            <!-- MATHEMATICS DOMAIN -->
+            <tr class="border-bottom"><td colspan="4" class="bg-light py-2 ps-4 fw-bold text-secondary small text-uppercase tracking-wide mt-3">Mathematics</td></tr>
+
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Linear Algebra</span></td>
+              <td class="py-3 fw-bold text-dark">Introduction to Linear Algebra</td>
+              <td class="py-3 text-secondary">Gilbert Strang</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Linear Algebra</span></td>
+              <td class="py-3 fw-bold text-dark">Mathematics for Machine Learning</td>
+              <td class="py-3 text-secondary">Deisenroth, Faisal & Ong</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Probability</span></td>
+              <td class="py-3 fw-bold text-dark">Introduction to Probability</td>
+              <td class="py-3 text-secondary">Blitzstein & Hwang</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Probability</span></td>
+              <td class="py-3 fw-bold text-dark">Probability with Martingales</td>
+              <td class="py-3 text-secondary">David Williams</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Probability</span></td>
+              <td class="py-3 fw-bold text-dark">An Introduction to Probability Theory and Its Applications</td>
+              <td class="py-3 text-secondary">William Feller</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Stochastic Calculus</span></td>
+              <td class="py-3 fw-bold text-dark">Stochastic Calculus for Finance II</td>
+              <td class="py-3 text-secondary">Steven Shreve</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Stochastic Calculus</span></td>
+              <td class="py-3 fw-bold text-dark">Arbitrage Theory in Continuous Time</td>
+              <td class="py-3 text-secondary">Tomas Björk</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Optimization</span></td>
+              <td class="py-3 fw-bold text-dark">Convex Optimization</td>
+              <td class="py-3 text-secondary">Boyd & Vandenberghe</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Real Analysis</span></td>
+              <td class="py-3 fw-bold text-dark">Understanding Analysis</td>
+              <td class="py-3 text-secondary">Stephen Abbott</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Real Analysis</span></td>
+              <td class="py-3 fw-bold text-dark">Principles of Mathematical Analysis</td>
+              <td class="py-3 text-secondary">Walter Rudin</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Applied Math</span></td>
+              <td class="py-3 fw-bold text-dark">The Concepts and Practice of Mathematical Finance</td>
+              <td class="py-3 text-secondary">Mark Joshi</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Applied Math</span></td>
+              <td class="py-3 fw-bold text-dark">Financial Calculus</td>
+              <td class="py-3 text-secondary">Baxter & Rennie</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+
+            <!-- DATA SCIENCE & MACHINE LEARNING DOMAIN -->
+            <tr class="border-bottom"><td colspan="4" class="bg-light py-2 ps-4 fw-bold text-secondary small text-uppercase tracking-wide mt-3">Statistics, Data Science & Machine Learning</td></tr>
+
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Statistics</span></td>
+              <td class="py-3 fw-bold text-dark">Statistical Inference</td>
+              <td class="py-3 text-secondary">Casella & Berger</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Stats / Data</span></td>
+              <td class="py-3 fw-bold text-dark">Statistics and Data Analysis for Financial Engineering</td>
+              <td class="py-3 text-secondary">Ruppert & Matteson</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Machine Learning</span></td>
+              <td class="py-3 fw-bold text-dark">The Elements of Statistical Learning</td>
+              <td class="py-3 text-secondary">Hastie, Tibshirani & Friedman</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Machine Learning</span></td>
+              <td class="py-3 fw-bold text-dark">Mathematics for Machine Learning</td>
+              <td class="py-3 text-secondary">Deisenroth, Faisal & Ong</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Reinforcement Lrng</span></td>
+              <td class="py-3 fw-bold text-dark">Foundations of Reinforcement Learning with Applications in Finance</td>
+              <td class="py-3 text-secondary">Ashwin Rao & Tikhon Jelvis</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Reinforcement Lrng</span></td>
+              <td class="py-3 fw-bold text-dark">Machine Learning in Finance</td>
+              <td class="py-3 text-secondary">Dixon, Halperin & Bilokon</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Data Analysis</span></td>
+              <td class="py-3 fw-bold text-dark">Market Models: A Guide to Financial Data Analysis</td>
+              <td class="py-3 text-secondary">Carol Alexander</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+
+            <!-- ENGINEERING & GENERAL DOMAIN -->
+            <tr class="border-bottom"><td colspan="4" class="bg-light py-2 ps-4 fw-bold text-secondary small text-uppercase tracking-wide mt-3">Engineering & General Reading</td></tr>
+
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 fw-medium">Quant Dev</span></td>
+              <td class="py-3 fw-bold text-dark">Monte Carlo Methods in Financial Engineering</td>
+              <td class="py-3 text-secondary">Paul Glasserman</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 fw-medium">Quant Dev</span></td>
+              <td class="py-3 fw-bold text-dark">Implementing Derivative Models</td>
+              <td class="py-3 text-secondary">Strickland & Clewlow</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 fw-medium">Soft Reading</span></td>
+              <td class="py-3 fw-bold text-dark">The Man Who Solved the Market</td>
+              <td class="py-3 text-secondary">Gregory Zuckerman</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 fw-medium">Soft Reading</span></td>
+              <td class="py-3 fw-bold text-dark">My Life as a Quant</td>
+              <td class="py-3 text-secondary">Emanuel Derman</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 fw-medium">Soft Reading</span></td>
+              <td class="py-3 fw-bold text-dark">The Quants</td>
+              <td class="py-3 text-secondary">Scott Patterson</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+            <tr>
+              <td class="py-3 ps-4"><span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-3 py-2 fw-medium">Soft Reading</span></td>
+              <td class="py-3 fw-bold text-dark">Trading at the Speed of Light</td>
+              <td class="py-3 text-secondary">Donald MacKenzie</td>
+              <td class="py-3 pe-4 text-end"><a href="#" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">View</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- NEW SECTION: Practice Platforms & Resources -->
+    <div class="d-flex justify-content-between align-items-end mb-3 mt-5">
+      <div>
+        <h3 class="fw-bold mb-1">Practice Platforms & Resources</h3>
+        <p class="text-secondary mb-0">Essential platforms for coding, mental math, and interview preparation.</p>
+      </div>
+    </div>
+
+    <!-- Platforms Table Card Wrapper -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5 page-break-inside-avoid">
+      <div class="table-responsive">
+        <table class="table table-hover table-borderless align-middle mb-0 w-100">
+          <thead class="table-light border-bottom">
+            <tr>
+              <th class="text-secondary fw-semibold py-3 ps-4">Category</th>
+              <th class="text-secondary fw-semibold py-3">Platform / Resource</th>
+              <th class="text-secondary fw-semibold py-3">Description</th>
+              <th class="text-secondary fw-semibold py-3 pe-4 text-end">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 fw-medium">Coding</span></td>
+              <td class="py-3 fw-bold text-dark">LeetCode</td>
+              <td class="py-3 text-secondary">Algorithmic coding and data structures preparation.</td>
+              <td class="py-3 pe-4 text-end"><a href="https://leetcode.com/" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">Visit</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-medium">Interview Prep</span></td>
+              <td class="py-3 fw-bold text-dark">Myntbite</td>
+              <td class="py-3 text-secondary">Quantitative interview preparation and practice.</td>
+              <td class="py-3 pe-4 text-end"><a href="#" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">Visit</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-warning bg-opacity-10 text-warning-emphasis rounded-pill px-3 py-2 fw-medium">Mental Math</span></td>
+              <td class="py-3 fw-bold text-dark">Zetamac</td>
+              <td class="py-3 text-secondary">Arithmetic practice game for speed and accuracy.</td>
+              <td class="py-3 pe-4 text-end"><a href="https://arithmetic.zetamac.com/" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">Visit</a></td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="py-3 ps-4"><span class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 fw-medium">Brainteasers</span></td>
+              <td class="py-3 fw-bold text-dark">Jane Street Puzzles & Interviews</td>
+              <td class="py-3 text-secondary">Probability, math, and logic interview questions.</td>
+              <td class="py-3 pe-4 text-end"><a href="https://www.janestreet.com/puzzles/" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">Visit</a></td>
+            </tr>
+            <tr>
+              <td class="py-3 ps-4"><span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 fw-medium">Lectures</span></td>
+              <td class="py-3 fw-bold text-dark">Quantopian Lecture Series</td>
+              <td class="py-3 text-secondary">Comprehensive curriculum on algorithmic trading.</td>
+              <td class="py-3 pe-4 text-end"><a href="https://gist.github.com/ih2502mk/50d8f7feb614c8676383431b056f4291" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill fw-medium px-4">Visit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="height: 200px;" class="d-print-none"></div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
